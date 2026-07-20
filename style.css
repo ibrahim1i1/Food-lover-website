@@ -8,6 +8,20 @@ body{
   background-color: gray;
    font-family: "Quicksand", sans-serif;
 }
+header{
+  height: 100vh;
+  background: url(img/home_bg.jpeg) center center/cover no-repeat;
+  position: relative;
+}
+header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0,0.4);
+}
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -30,4 +44,44 @@ body{
 }
 .navbar ul li a:hover{
   border-bottom: 2px solid #e4b95b;
+}
+header .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+header .content h1{
+  font-size: 40px;
+  color: #fff;
+}
+.primary-text{
+  color: #e4b95b;
+}
+.btn{
+  display: inline-block;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+}
+.btn-primary{
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.btn-primary:hover{
+  background: #e4b95b;
+  border: 1px solid #000;
+  color: #000;
+}
+header .content p{
+  margin: 20px 0 40px;
+  color: #fff;
+}
+header *{
+  z-index: 10;
 }
